@@ -1,10 +1,10 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_animations_themes_custom_painter/screens/flutter_transform.dart';
-import 'package:flutter_animations_themes_custom_painter/screens/implicit_animations.dart';
-import 'package:flutter_animations_themes_custom_painter/screens/tween_animation.dart';
-import 'package:flutter_animations_themes_custom_painter/widgets/custom_text.dart';
+import 'flutter_transform.dart';
+import 'implicit_animations.dart';
+import 'tween_animation.dart';
+import '../widgets/custom_text.dart';
 
 import 'explicit_animations.dart';
 import 'flutter_curves.dart';

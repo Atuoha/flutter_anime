@@ -1,36 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_anime/screens/home.dart';
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatefulWidget {
-  State<MyApp> createState() => MyAppState();
+void main() {
+  runApp(MyApp());
 }
 
-class MyAppState extends State<MyApp> {
-  var bigSize = false;
-
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        body: Column(
-          children: [
-            AnimatedContainer(
-              duration: const Duration(seconds: 5),
-              child: Image.network(
-                width: bigSize ? 200: 100,
-                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOCesXYLzPeEfp-IVwjrXyxGVMCXZRifCErirn0RSp4TdchrbpbotnXnTWJSBNlVsw1Lk&usqp=CAU'),
-            ),
-            const SizedBox(height: 10),
-            ElevatedButton(
-              onPressed: () => setState(() {
-                bigSize = true;
-              }),
-              child: const Text('Change style'),
-            )
-          ],
-        ),
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
       ),
+      home: const HomeScreen(),
     );
   }
 }

@@ -1,8 +1,7 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_animations_themes_custom_painter/widgets/custom_button.dart';
-import 'package:flutter_animations_themes_custom_painter/widgets/custom_text.dart';
+import '../widgets/custom_button.dart';
+import '../widgets/custom_text.dart';
 
 class ImplicitAnimationsExample extends StatefulWidget {
   const ImplicitAnimationsExample({Key? key}) : super(key: key);
@@ -22,12 +21,16 @@ class _ImplicitAnimationsExampleState extends State<ImplicitAnimationsExample> {
   late double _borderRadius;
   late double _margin;
 
-  @override
-  void initState() {
-    super.initState();
+  randomise() {
     _color = _randomColor();
     _borderRadius = _randomValue();
     _margin = _randomValue();
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    randomise();
     Future.delayed(Duration(milliseconds: 300), () {
       setState(() {
         _opacity = 1;
@@ -96,7 +99,6 @@ class _ImplicitAnimationsExampleState extends State<ImplicitAnimationsExample> {
                 setState(() {
                   _width = _randomValue(max: 200);
                   _height = _randomValue(max: 300);
-
                 });
               },
               label: ' Change Size 🤏🏻',

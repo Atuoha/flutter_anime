@@ -1,8 +1,6 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_animations_themes_custom_painter/widgets/custom_button.dart';
-import 'package:flutter_animations_themes_custom_painter/widgets/custom_text.dart';
+import '../widgets/custom_button.dart';
+import '../widgets/custom_text.dart';
 
 class FlutterCurvesExample extends StatefulWidget {
   const FlutterCurvesExample({ Key? key }) : super(key: key);
