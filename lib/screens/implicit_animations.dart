@@ -66,6 +66,8 @@ class ImplicitAnimationState extends State<ImplicitAnimation> {
                 margin: EdgeInsets.all(margin),
                 height: height,
                 width: width,
+                transform: Matrix4.identity()..rotateZ(angle),
+                transformAlignment: FractionalOffset.center,
                 decoration: BoxDecoration(
                   color: color,
                   borderRadius: BorderRadius.all(
@@ -75,7 +77,7 @@ class ImplicitAnimationState extends State<ImplicitAnimation> {
                 duration: animationDuration,
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 50),
             CustomButton(
               onTap: () {
                 setState(() {
