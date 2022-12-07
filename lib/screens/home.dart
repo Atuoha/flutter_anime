@@ -9,75 +9,114 @@ import 'flutter_curves.dart';
 import 'flutter_matrix_four.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({ Key? key }) : super(key: key);
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
- 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
+      backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.white,
-        title: Text('Flutter App Design', style: TextStyle(color: Colors.black)),
+        title:
+            Text('Flutter App Design', style: TextStyle(color: Colors.black)),
       ),
       body: ListView(
         children: [
           ListTile(
-            leading: CustomText('👉', size: 30,),
-            title: CustomText('Implicit Animated', size: 18,),
-            onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (_) => ImplicitAnimation()));
+            leading: CustomText(
+              '👉',
+              size: 30,
+            ),
+            title: CustomText(
+              'Implicit Animated',
+              size: 18,
+            ),
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (_) => ImplicitAnimation()));
             },
           ),
           Divider(),
-             ListTile(
-            leading: CustomText('👉', size: 30,),
-            title: CustomText('Flutter transform', size: 18,),
-            onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (_) => FlutterTransformExample()));
+          ListTile(
+            leading: CustomText(
+              '👉',
+              size: 30,
+            ),
+            title: CustomText(
+              'Flutter transform',
+              size: 18,
+            ),
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (_) => FlutterTransformExample()));
             },
           ),
-             Divider(),
-             ListTile(
-            leading: CustomText('👉', size: 30,),
-            title: CustomText('Flutter Matrix4', size: 18,),
-            onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (_) => FlutterMatrixFourExample()));
+          Divider(),
+          ListTile(
+            leading: CustomText(
+              '👉',
+              size: 30,
+            ),
+            title: CustomText(
+              'Flutter Matrix4',
+              size: 18,
+            ),
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (_) => MatrixFour()));
             },
           ),
-              Divider(),
-             ListTile(
-            leading: CustomText('👉', size: 30,),
-            title: CustomText('Flutter Animation curves', size: 18,),
-            onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (_) => FlutterCurvesExample()));
+          Divider(),
+          ListTile(
+            leading: CustomText(
+              '👉',
+              size: 30,
+            ),
+            title: CustomText(
+              'Flutter Animation curves',
+              size: 18,
+            ),
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (_) => FlutterCurvesExample()));
             },
           ),
-                 Divider(),
-             ListTile(
-            leading: CustomText('👉', size: 30,),
-            title: CustomText('Flutter Tween Animations', size: 18,),
-            onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (_) => TweenAnimationExample()));
+          Divider(),
+          ListTile(
+            leading: CustomText(
+              '👉',
+              size: 30,
+            ),
+            title: CustomText(
+              'Flutter Tween Animations',
+              size: 18,
+            ),
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (_) => TweenAnimationExample()));
             },
           ),
-                   Divider(),
-             ListTile(
-            leading: CustomText('👉', size: 30,),
-            title: CustomText('Explicit Animations', size: 18,),
-            onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (_) => BouncingBallDemo()));
+          Divider(),
+          ListTile(
+            leading: CustomText(
+              '👉',
+              size: 30,
+            ),
+            title: CustomText(
+              'Explicit Animations',
+              size: 18,
+            ),
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (_) => BouncingBallDemo()));
             },
           ),
-
-    
         ],
       ),
     );

@@ -37,7 +37,7 @@ class _FlutterTransformExampleState extends State<FlutterTransformExample> {
             ),
             child: Align(
               child: Transform(
-                transform: Matrix4.skewY(0.5),
+                transform: Matrix4.skewY(0.1),
                 child: Container(
                 width: 150,
                 height: 100,
