@@ -1,11 +1,9 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'flutter_transform.dart';
 import 'implicit_animations.dart';
 import 'tween_animation.dart';
 import '../widgets/custom_text.dart';
-
 import 'explicit_animations.dart';
 import 'flutter_curves.dart';
 import 'flutter_matrix_four.dart';
@@ -35,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
             leading: CustomText('👉', size: 30,),
             title: CustomText('Implicit Animated', size: 18,),
             onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (_) => ImplicitAnimationsExample()));
+              Navigator.push(context, MaterialPageRoute(builder: (_) => ImplicitAnimation()));
             },
           ),
           Divider(),

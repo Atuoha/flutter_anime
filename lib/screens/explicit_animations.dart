@@ -2,8 +2,10 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 class BouncingBallDemo extends StatefulWidget {
+  const BouncingBallDemo({super.key});
+
   @override
-  _BouncingBallDemoState createState() => _BouncingBallDemoState();
+  State<BouncingBallDemo> createState() => _BouncingBallDemoState();
 }
 
 class _BouncingBallDemoState extends State<BouncingBallDemo> {
@@ -27,19 +29,19 @@ class _BouncingBallDemoState extends State<BouncingBallDemo> {
     return Scaffold(
           backgroundColor: Colors.white,
       appBar: AppBar(
-        iconTheme: IconThemeData(color: Colors.black),
+        iconTheme: const IconThemeData(color: Colors.black),
         elevation: 0,
         backgroundColor: Colors.white,
-        title: Text('Explicit Animations', style: TextStyle(color: Colors.black)),
+        title: const Text('Explicit Animations', style: TextStyle(color: Colors.black)),
       ),
-      body: Container(
+      body: SizedBox(
         width: double.infinity,
         child: Column(
           children: [
             Container(
               margin: EdgeInsets.only(top: marginTop),
               child: Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                   color: Colors.green,
                 ),
