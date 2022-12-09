@@ -56,8 +56,8 @@ class MatrixFourState extends State<MatrixFour> {
               });
             },
             child: Container(
-              height: 260,
-              width: 210,
+              height: 310,
+              width: 280,
               decoration: BoxDecoration(
                 color: Colors.brown,
                 borderRadius: BorderRadius.circular(10),

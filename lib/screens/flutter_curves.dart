@@ -33,15 +33,16 @@ class _FlutterCurvesExampleState extends State<FlutterCurvesExample> {
            CurveDisplay(curveName: 'Bounce In',curve: Curves.bounceIn ,width: _width),
            CurveDisplay(curveName: 'Bounce out',curve: Curves.bounceOut ,width: _width),
            CurveDisplay(curveName: 'Decelerate',curve: Curves.decelerate ,width: _width),
+           CurveDisplay(width: _width, curveName: 'easeInCirc', curve: Curves.easeInCirc),
 
 
-           SizedBox(height: 20,),
+           const SizedBox(height: 20,),
            CustomButton(label: ' Animate 🔥', onTap: (){
               setState(() {
               _width = 300;
             });
            },),
-             SizedBox(height: 10,),
+             const SizedBox(height: 10,),
            CustomButton(label: ' Re-set 🔁', onTap: (){
               setState(() {
               _width = 80;
@@ -73,7 +74,7 @@ class CurveDisplay extends StatelessWidget {
                width: _width,
                height: 20,
                curve: curve,
-               duration: Duration(milliseconds: 700),
+               duration: const Duration(milliseconds: 700),
                decoration: BoxDecoration(
                  color: Colors.blue,
                  borderRadius: BorderRadius.circular(10)

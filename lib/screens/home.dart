@@ -24,16 +24,16 @@ class _HomeScreenState extends State<HomeScreen> {
         elevation: 0,
         backgroundColor: Colors.white,
         title:
-            Text('Flutter App Design', style: TextStyle(color: Colors.black)),
+            const Text('Flutter App Design', style: TextStyle(color: Colors.black)),
       ),
       body: ListView(
         children: [
           ListTile(
-            leading: CustomText(
+            leading: const CustomText(
               '👉',
               size: 30,
             ),
-            title: CustomText(
+            title: const CustomText(
               'Implicit Animated',
               size: 18,
             ),
@@ -42,79 +42,79 @@ class _HomeScreenState extends State<HomeScreen> {
                   MaterialPageRoute(builder: (_) => ImplicitAnimation()));
             },
           ),
-          Divider(),
+          const Divider(),
           ListTile(
-            leading: CustomText(
+            leading: const CustomText(
               '👉',
               size: 30,
             ),
-            title: CustomText(
+            title: const CustomText(
               'Flutter transform',
               size: 18,
             ),
             onTap: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (_) => FlutterTransformExample()));
+                  MaterialPageRoute(builder: (_) => const FlutterTransformExample()));
             },
           ),
-          Divider(),
+          const Divider(),
           ListTile(
-            leading: CustomText(
+            leading: const CustomText(
               '👉',
               size: 30,
             ),
-            title: CustomText(
+            title: const CustomText(
               'Flutter Matrix4',
               size: 18,
             ),
             onTap: () {
               Navigator.push(
-                  context, MaterialPageRoute(builder: (_) => MatrixFour()));
+                  context, MaterialPageRoute(builder: (_) => const MatrixFour()));
             },
           ),
-          Divider(),
+          const Divider(),
           ListTile(
-            leading: CustomText(
+            leading: const CustomText(
               '👉',
               size: 30,
             ),
-            title: CustomText(
+            title: const CustomText(
               'Flutter Animation curves',
               size: 18,
             ),
             onTap: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (_) => FlutterCurvesExample()));
+                  MaterialPageRoute(builder: (_) => const FlutterCurvesExample()));
             },
           ),
-          Divider(),
+          const Divider(),
           ListTile(
-            leading: CustomText(
+            leading: const CustomText(
               '👉',
               size: 30,
             ),
-            title: CustomText(
+            title: const CustomText(
               'Flutter Tween Animations',
               size: 18,
             ),
             onTap: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (_) => TweenAnimationExample()));
+                  MaterialPageRoute(builder: (_) => const TweenAnimation()));
             },
           ),
-          Divider(),
+          const Divider(),
           ListTile(
-            leading: CustomText(
+            leading: const CustomText(
               '👉',
               size: 30,
             ),
-            title: CustomText(
+            title: const CustomText(
               'Explicit Animations',
               size: 18,
             ),
             onTap: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (_) => BouncingBallDemo()));
+                  MaterialPageRoute(builder: (_) => const BouncingBallDemo()));
             },
           ),
         ],

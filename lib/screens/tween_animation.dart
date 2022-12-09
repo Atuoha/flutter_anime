@@ -1,47 +1,51 @@
 import 'package:flutter/material.dart';
-import '../widgets/custom_text.dart';
+import 'package:flutter_anime/widgets/custom_text.dart';
 
-class TweenAnimationExample extends StatefulWidget {
-  const TweenAnimationExample({Key? key}) : super(key: key);
+class TweenAnimation extends StatefulWidget {
+  const TweenAnimation({super.key});
 
   @override
-  _TweenAnimationExampleState createState() => _TweenAnimationExampleState();
+  State<TweenAnimation> createState() => TweenAnimationState();
 }
 
-class _TweenAnimationExampleState extends State<TweenAnimationExample> {
-  var _scale = 1.0;
+class TweenAnimationState extends State<TweenAnimation> {
+  double scale = 1.0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-            backgroundColor: Colors.white,
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        iconTheme: IconThemeData(color: Colors.black),
+        iconTheme: const IconThemeData(color: Colors.black),
         elevation: 0,
         backgroundColor: Colors.white,
-        title: Text('Transform Widget', style: TextStyle(color: Colors.black)),
       ),
-      body: Container(
-        width: double.infinity,
+      body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             TweenAnimationBuilder<double>(
-              builder: (context, value, child){
-                return Transform.scale(scale: value, child: child,);
-              },
-              tween: Tween(begin: 1, end: _scale),
-              duration: Duration(milliseconds: 600),
-              child: CustomText('🍑', size: 80)),
-              SizedBox(height: 20,),
-              Slider.adaptive(value: _scale, 
-              max: 5,
-              min: 1,
-              onChanged: (value){
-                setState(() {
-                _scale = value;
-                  
-                });
-              })
+                tween: Tween(begin: 1, end: scale),
+                duration: const Duration(milliseconds: 400),
+                child: const CustomText('❤',size:70),
+                builder: (context, value, child) {
+                  return Transform.scale(
+                    scale: value,
+                    child: child,
+                  );
+                }),
+            const SizedBox(height: 30,),
+            Slider.adaptive(
+              thumbColor: Colors.red,
+              activeColor: Colors.red,
+              inactiveColor: Colors.red.shade200,
+              max:5,
+              min:1,
+              value: scale,
+              onChanged: (value) => setState(() {
+                scale = value;
+              }),
+            )
           ],
         ),
       ),
