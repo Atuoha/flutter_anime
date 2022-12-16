@@ -7,6 +7,7 @@ import '../widgets/custom_text.dart';
 import 'explicit_animations.dart';
 import 'flutter_curves.dart';
 import 'flutter_matrix_four.dart';
+import 'package:page_transition/page_transition.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -23,8 +24,8 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.white,
-        title:
-            const Text('Flutter App Design', style: TextStyle(color: Colors.black)),
+        title: const Text('Flutter App Design',
+            style: TextStyle(color: Colors.black)),
       ),
       body: ListView(
         children: [
@@ -38,8 +39,15 @@ class _HomeScreenState extends State<HomeScreen> {
               size: 18,
             ),
             onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (_) => ImplicitAnimation()));
+              Navigator.push(
+                context,
+                PageTransition(
+                  child: ImplicitAnimation(),
+                  type: PageTransitionType.bottomToTop,
+                  duration: const Duration(seconds: 1),
+                  reverseDuration: const Duration(seconds: 1),
+                ),
+              );
             },
           ),
           const Divider(),
@@ -53,8 +61,15 @@ class _HomeScreenState extends State<HomeScreen> {
               size: 18,
             ),
             onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (_) => const FlutterTransformExample()));
+              Navigator.push(
+                  context,
+                  PageTransition(
+                    child: const FlutterTransformExample(),
+                    type: PageTransitionType.leftToRight,
+                    duration: const Duration(seconds: 1),
+                    reverseDuration: const Duration(seconds: 1),
+                  ));
+
             },
           ),
           const Divider(),
@@ -68,8 +83,13 @@ class _HomeScreenState extends State<HomeScreen> {
               size: 18,
             ),
             onTap: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (_) => const MatrixFour()));
+              Navigator.push(context,
+                  PageTransition(
+                    child: const  MatrixFour(),
+                    type: PageTransitionType.fade,
+                    duration: const Duration(seconds: 1),
+                    reverseDuration: const Duration(seconds: 1),
+                  ));
             },
           ),
           const Divider(),
@@ -83,8 +103,16 @@ class _HomeScreenState extends State<HomeScreen> {
               size: 18,
             ),
             onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (_) => const FlutterCurvesExample()));
+              Navigator.push(
+                  context,
+                  PageTransition(
+                    child: const FlutterCurvesExample(),
+                    type: PageTransitionType.rotate,
+                    duration: const Duration(seconds: 1),
+                    reverseDuration: const Duration(seconds: 1),
+                    alignment: Alignment.topCenter
+                  ));
+
             },
           ),
           const Divider(),
@@ -99,7 +127,13 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             onTap: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (_) => const TweenAnimation()));
+                  PageTransition(
+                    child: const TweenAnimation(),
+                    type: PageTransitionType.topToBottomPop,
+                    duration: const Duration(seconds: 1),
+                    reverseDuration: const Duration(seconds: 1),
+                    childCurrent: widget
+                  ));
             },
           ),
           const Divider(),
@@ -114,7 +148,13 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             onTap: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (_) => const BouncingBallDemo()));
+                  PageTransition(
+                    child: const BouncingBallDemo(),
+                    type: PageTransitionType.leftToRightPop,
+                    duration: const Duration(seconds: 1),
+                    reverseDuration: const Duration(seconds: 1),
+                    childCurrent: widget
+                  ));
             },
           ),
         ],
